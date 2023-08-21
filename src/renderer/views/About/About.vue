@@ -1,7 +1,7 @@
 <template>
   <div>
     <ft-card class="card">
-      <h1>
+      <h1 class="aboutTitleText">
         {{ $t("About.About") }}
       </h1>
       <section class="brand">

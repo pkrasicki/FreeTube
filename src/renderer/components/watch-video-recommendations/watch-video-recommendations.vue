@@ -4,7 +4,7 @@
     class="relative watchVideoRecommendations"
   >
     <div class="VideoRecommendationsTopBar">
-      <h3>
+      <h3 class="videoRecommendationsTitle">
         {{ $t("Up Next") }}
       </h3>
       <ft-toggle-switch

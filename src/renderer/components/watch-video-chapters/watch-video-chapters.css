@@ -1,5 +1,8 @@
 .videoChapters {
   overflow-y: hidden;
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .chaptersTitle {

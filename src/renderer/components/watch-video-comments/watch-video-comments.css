@@ -1,5 +1,6 @@
 .card {
-  padding: 0 16px;
+  padding: 0;
+  background-color: transparent;
 }
 
 .getCommentsTitle,
@@ -34,7 +35,7 @@
 }
 
 .comment {
-  padding: 15px;
+  padding: 15px 0;
   position: relative;
 }
 

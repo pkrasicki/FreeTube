@@ -1,6 +1,8 @@
 .videoDescription {
   overflow-y: auto;
   max-height: 300px;
+  padding: 0;
+  background-color: transparent;
 }
 
 .description {
@@ -8,4 +10,5 @@
   font-size: 17px;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
+  margin: 0;
 }

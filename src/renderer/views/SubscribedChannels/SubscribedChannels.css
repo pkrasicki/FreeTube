@@ -1,7 +1,12 @@
 .card {
-  width: 85%;
   margin: 0 auto;
   margin-bottom: 60px;
+  background-color: transparent;
+}
+
+.pageTitleText {
+  text-align: center;
+  margin-top: 0;
 }
 
 .message {
@@ -66,10 +71,6 @@
 }
 
 @media only screen and (max-width: 680px) {
-  .card {
-    width: 90%;
-  }
-
   .channels {
     gap: 1.5rem;
   }

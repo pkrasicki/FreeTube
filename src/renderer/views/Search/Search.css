@@ -13,13 +13,12 @@
 }
 
 .card {
-  width: 85%;
   margin: 0 auto;
   margin-bottom: 60px;
+  background-color: transparent;
 }
 
-@media only screen and (max-width: 680px) {
-  .card {
-    width: 90%;
-  }
+.pageTitleText {
+  text-align: center;
+  margin-top: 0;
 }

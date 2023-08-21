@@ -8,7 +8,7 @@
       v-show="!isLoading"
       class="card"
     >
-      <h2>
+      <h2 class="pageTitleText">
         {{ $t("User Playlists.Your Playlists") }}
         <ft-tooltip
           class="selectTooltip"

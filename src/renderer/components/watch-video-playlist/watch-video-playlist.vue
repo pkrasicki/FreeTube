@@ -1,12 +1,12 @@
 <template>
-  <ft-card class="relative">
+  <ft-card class="relative playlistContainer">
     <ft-loader
       v-if="isLoading"
     />
     <div
       v-else
     >
-      <h3>
+      <h3 class="playlistTitleHeader">
         <router-link
           class="playlistTitle"
           :to="`/playlist/${playlistId}`"

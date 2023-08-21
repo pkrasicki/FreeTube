@@ -1,7 +1,7 @@
 <template>
   <div>
     <ft-card class="card">
-      <h2>{{ $t("Profile.Profile Manager") }}</h2>
+      <h2 class="pageTitleText">{{ $t("Profile.Profile Manager") }}</h2>
       <ft-flex-box
         class="profileList"
       >

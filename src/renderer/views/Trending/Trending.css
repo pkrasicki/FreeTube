@@ -1,7 +1,12 @@
 .card {
-  width: 85%;
   margin: 0 auto;
   margin-bottom: 60px;
+  background-color: transparent;
+}
+
+.pageTitleText {
+	text-align: center;
+  margin: 0;
 }
 
 .floatingTopButton {
@@ -42,11 +47,5 @@
 @media only screen and (max-width: 350px) {
   .floatingTopButton {
     position: absolute
-  }
-}
-
-@media only screen and (max-width: 680px) {
-  .card {
-    width: 90%;
   }
 }

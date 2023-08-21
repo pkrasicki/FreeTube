@@ -52,7 +52,7 @@ $watched-transition-duration: 0.5s;
 }
 
 .ft-list-item {
-  padding: 6px;
+  padding: 6px 0;
 
   &.watched {
     @include low-contrast-when-watched(var(--primary-text-color));

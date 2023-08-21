@@ -1,3 +1,12 @@
+.playlistContainer {
+  background-color: transparent;
+  padding-right: 0;
+}
+
+.playlistTitleHeader {
+  margin-top: 0;
+}
+
 .playlistTitle, .channelName {
   text-decoration: none;
   color: inherit;

@@ -1,7 +1,12 @@
 .card {
-  width: 85%;
   margin: 0 auto;
   margin-bottom: 15px;
+  background-color: transparent;
+}
+
+.pageTitleText {
+  text-align: center;
+  margin-top: 0;
 }
 
 .message {
@@ -36,10 +41,4 @@
   line-height: 1em;
   text-align: center;
   padding: 25px 0;
-}
-
-@media only screen and (max-width: 680px) {
-  .card {
-    width: 90%;
-  }
 }

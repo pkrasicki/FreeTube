@@ -56,16 +56,16 @@
   --secondary-text-color: #ddd;
   --tertiary-text-color: #999;
   --title-color: #EEEEEE;
-  --bg-color: #212121;
+  --bg-color: #0f0f0f;
   --favorite-icon-color: #FFEA00;
-  --card-bg-color: #303030;
+  --card-bg-color: rgb(28, 28, 28);
   --secondary-card-bg-color: rgba(0, 0, 0, 0.75);
   --scrollbar-color: #414141;
   --scrollbar-color-hover: #757575;
-  --side-nav-color: #262626;
-  --side-nav-hover-color: #212121;
+  --side-nav-color: rgb(28,28,28);
+  --side-nav-hover-color: #272727;
   --side-nav-active-color: #303030;
-  --search-bar-color: #262626;
+  --search-bar-color: #171717;
 }
 
 .black {

@@ -8,7 +8,7 @@
       v-else
       class="card"
     >
-      <h2>{{ $t("Most Popular") }}</h2>
+      <h2 class="pageTitleText">{{ $t("Most Popular") }}</h2>
       <ft-element-list
         :data="shownResults"
       />

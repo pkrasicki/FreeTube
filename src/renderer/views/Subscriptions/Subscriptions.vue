@@ -1,7 +1,7 @@
 <template>
   <div>
     <ft-card class="card">
-      <h2>{{ $t("Subscriptions.Subscriptions") }}</h2>
+      <h2 class="pageTitleText">{{ $t("Subscriptions.Subscriptions") }}</h2>
       <ft-flex-box
         class="subscriptionTabs"
         role="tablist"

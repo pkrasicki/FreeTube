@@ -5,6 +5,9 @@
 .watchVideoRecommendations {
 	display: grid;
 	grid-gap: 8px;
+	background-color: transparent;
+	padding-top: 0;
+	padding-right: 0;
 }
 
 .autoPlayToggle {
@@ -13,7 +16,18 @@
 	align-items: center;
 }
 
+
+.autoPlayToggle :deep(.switch-label) {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 .VideoRecommendationsTopBar{
 	display:flex; 
 	justify-content:space-between;
+	padding-right: 16px;
+}
+
+.videoRecommendationsTitle {
+	margin: 0;
 }
