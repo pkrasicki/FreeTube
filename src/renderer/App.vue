@@ -92,3 +92,5 @@
 <style src="./themes.css" />
 <style src="./videoJS.css" />
 <style scoped src="./App.css" />
+
+<style lang="scss" src="./restyled.scss" />

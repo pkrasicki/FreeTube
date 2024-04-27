@@ -1,0 +1,675 @@
+body
+{
+	--restyled-primary-btn-color: #101010;
+	--restyled-primary-btn-text-color: #fff;
+	--restyled-primary-btn-divider-color: rgba(255, 255, 255, 0.25);
+}
+
+// default dark theme
+.dark, .system[data-system-theme*=dark]
+{
+	--bg-color: #0f0f0f;
+	--card-bg-color: #161616;
+	--side-nav-color: #161616;
+	--search-bar-color: #1b1b1b;
+	--accent-color: #515151;
+
+	// video author's comment - username
+	.commentOwner
+	{
+		background-color: rgb(55, 55, 55) !important;
+	}
+}
+
+.black, .nordic, .dracula, .catppuccinMocha
+{
+	--accent-color: var(--search-bar-color);
+}
+
+.catppuccinMocha, .dracula
+{
+	--title-color: var(--primary-text-color);
+}
+
+// all dark themes
+.dark,
+.system[data-system-theme*=dark],
+.black,
+.nordic,
+.dracula,
+.catppuccinMocha
+{
+	--restyled-primary-btn-color: #f3f3f3;
+	--restyled-primary-btn-text-color: #000;
+	--restyled-primary-btn-divider-color: rgba(0, 0, 0, 0.25);
+	--link-color: #7bc6ff;
+
+	// switch track
+	.switch-label:before
+	{
+		background-color: var(--accent-color) !important;
+	}
+
+	// switch thumb
+	.switch-label:after
+	{
+		background-color: var(--restyled-primary-btn-color) !important;
+	}
+
+	// switch track - checked
+	.switch-input:checked+.switch-label:before
+	{
+		background-color: var(--restyled-primary-btn-color) !important;
+	}
+
+	// switch thumb - checked
+	.switch-input:checked+.switch-label:after
+	{
+		background-color: var(--accent-color) !important;
+	}
+
+	// fix text color on primary subscribe/unsubscribe buttons
+	:not(.infoAndSubscribe, .unsubscribeContainer) > .ftSubscribeButton
+	{
+		--text-with-main-color: var(--restyled-primary-btn-text-color);
+	}
+
+	.sideNav hr
+	{
+		background-color: rgba(255, 255, 255, 0.15) !important;
+	}
+
+	// profile selection popup menu
+	.profileList
+	{
+		background-color: var(--side-nav-color) !important;
+	}
+
+	// range slider - thumb
+	input[type=range]::-webkit-slider-thumb
+	{
+		background: var(--restyled-primary-btn-color) !important;
+	}
+
+	// range slider - track
+	input[type=range]::-webkit-slider-runnable-track
+	{
+		background-color: var(--accent-color) !important;
+	}
+}
+
+.black
+{
+	.promptCard
+	{
+		background-color: var(--side-nav-color) !important;
+	}
+}
+
+// default light theme
+.light, .system[data-system-theme*=light]
+{
+	--card-bg-color: #f1f1f1;
+	--bg-color: #fff;
+	--search-bar-color: #ebebeb;
+	--accent-color: #ebebeb;
+	--text-with-accent-color: var(--primary-text-color);
+	--title-color: var(--primary-text-color);
+	--link-color: #0060a9;
+	--favorite-icon-color: #ffb400;
+
+	.switch-input:checked+.switch-label:before
+	{
+		background-color: var(--restyled-primary-btn-color) !important;
+	}
+
+	.switch-input:checked+.switch-label:after
+	{
+		background-color: var(--bg-color) !important;
+	}
+
+	// fix colors on gray subscribe/unsubscribe buttons
+	.unsubscribeContainer > .ftSubscribeButton, // unsubscribe button in channels list
+	.ftSubscribeButton.channelSubscribeButton // subscribe button in search view
+	{
+		--text-with-main-color: var(--primary-text-color);
+
+		& > .hasProfileDropdownToggle > .subscribeButton.btn
+		{
+			--primary-color-active: rgba(0, 0, 0, 0.25);
+		}
+	}
+
+	// subscribed icon - shows that we subscribe to the comment author's channel
+	.commentSubscribedIcon
+	{
+		filter: invert(1);
+	}
+
+	.routerView:has(.settingsSection)
+	{
+		background-color: #f7f7f7 !important;
+	}
+
+	.settingsSection
+	{
+		--side-nav-color: #fff;
+	}
+}
+
+
+a:not(.channelName):not(:hover)
+{
+	text-decoration: none;
+}
+
+.topNav
+{
+	box-shadow: none !important;
+	background-color: var(--bg-color) !important;
+}
+
+.topNav > .side
+{
+	padding-left: 12px !important;
+}
+
+.topNav .logo
+{
+	display: none !important;
+}
+
+#app .routerView
+{
+	margin-block: 5px !important;
+}
+
+@media (max-width: 680px)
+{
+	// fix for mobile layout
+	#app .routerView
+	{
+		margin-block: 35px !important;
+	}
+}
+
+#app > .routerView > .routerView
+{
+	& > .ft-card
+	{
+		inline-size: auto !important;
+		box-shadow: none !important;
+
+		// page title
+		& > h2,
+		& > h1,
+		& > .heading > .headingText
+		{
+			margin-top: 10px !important;
+			text-align: center !important;
+			font-weight: normal;
+		}
+	}
+}
+
+.ft-card
+{
+	background-color: var(--bg-color) !important;
+}
+
+.sideNav
+{
+	background-color: var(--bg-color) !important;
+	box-shadow: none !important;
+
+	& hr
+	{
+		background-color: rgba(0, 0, 0, 0.15) !important;
+	}
+}
+
+.tab
+{
+	color: var(--primary-text-color) !important;
+	padding-bottom: 10px !important;
+	border-block-end: 3px solid transparent !important;
+
+	// make hover behaviour consistent for all tabs
+	&:not(.selectedTab):hover
+	{
+		border-block-end: 3px solid var(--tertiary-text-color) !important;
+	}
+
+	&.selectedTab
+	{
+		border-block-end: 3px solid var(--restyled-primary-btn-color) !important;
+		margin-block-end: 0 !important;
+	}
+}
+
+.btn, .buttonList
+{
+	box-shadow: none !important;
+}
+
+.ftIconButton > svg.primary
+{
+	background-color: var(--restyled-primary-btn-color) !important;
+	--text-with-main-color: var(--restyled-primary-btn-text-color);
+}
+
+:not(.playlistIcons) > .ftIconButton > :is(svg.secondary, svg.base)
+{
+	box-shadow: none !important;
+
+	&:hover
+	{
+		background-color: var(--side-nav-hover-color) !important;
+	}
+
+	&:active
+	{
+		background-color: var(--side-nav-active-color) !important;
+	}
+}
+
+.ft-input
+{
+	color: var(--primary-text-color) !important;
+}
+
+// range slider - thumb
+input[type=range]::-webkit-slider-thumb
+{
+	background-color: #fff !important;
+	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.459) !important;
+}
+
+// range slider - track
+input[type=range]::-webkit-slider-runnable-track
+{
+	background-color: #868686 !important;
+}
+
+.select-label
+{
+	color: var(--primary-text-color) !important;
+}
+
+// switch track
+.switch-label:before
+{
+	block-size: 26px !important;
+	inline-size: 48px !important;
+	border-radius: 25px !important;
+}
+
+// switch thumb
+.switch-label:after
+{
+	block-size: 22px !important;
+	inline-size: 22px !important;
+
+	// fix for thumb posision after restyling the switch
+	transform: translate(calc(15% * var(--horizontal-directionality-coefficient)), -50%) !important;
+}
+
+// switch label text
+.switch-label
+{
+	padding-inline: 60px 0 !important;
+}
+
+// switch thumb - checked
+.switch-input:checked+.switch-label:after
+{
+	// fix for thumb posision after restyling the switch
+	transform: translate(calc(110% * var(--horizontal-directionality-coefficient)), -50%) !important;
+}
+
+// decrease the height of subscribe/unsubscribe buttons
+.ftSubscribeButton > .buttonList:not(.hasProfileDropdownToggle) > .subscribeButton.btn
+{
+	padding-block: 6px !important;
+}
+
+// decrease the height of subscribe/unsubscribe buttons
+.hasProfileDropdownToggle > .subscribeButton.btn, .profileDropdownToggle.btn
+{
+	padding-block: 0px !important;
+}
+
+.ftSubscribeButton
+{
+	// fix divider color
+	--primary-color-active: var(--restyled-primary-btn-divider-color);
+}
+
+// make some subscribe/unsubscribe buttons more subtle
+:is(.unsubscribeContainer, .infoAndSubscribe) > .ftSubscribeButton
+{
+	--primary-color: var(--accent-color);
+}
+
+// fix text color in subscribe/unsubscribe profile selection dropdown
+:not(.unsubscribeContainer) > .ftSubscribeButton:not(.channelSubscribeButton)
+{
+	.profileDropdown .profile.subscribed .profileName
+	{
+		color: var(--restyled-primary-btn-text-color) !important;
+	}
+}
+
+.trendingInfoTabs
+{
+	display: flex !important; // makes trending tabs consistent with subscriptions tabs
+}
+
+// profile selection popup menu
+.profileList
+{
+	box-shadow: 0 1px 2px rgb(0 0 0 / 50%) !important;
+}
+
+
+// --- channel page ---
+
+.channelDetails
+{
+	box-shadow: none !important;
+}
+
+.channelInfoContainer
+{
+	background-color: transparent !important;
+}
+
+#aboutPanel
+{
+	background-color: transparent !important;
+	padding-top: 0 !important;
+}
+
+// --- channel page ---
+
+
+// --- settings page ---
+
+.routerView:has(.settingsSection)
+{
+	.switchColumnGrid, hr
+	{
+		max-width: 600px !important;
+	}
+
+	& > .switchColumnGrid
+	{
+		margin-bottom: 20px !important;
+	}
+
+	.settingsSection + hr
+	{
+		border-color: transparent !important;
+	}
+}
+
+.settingsSection:not([open])
+{
+	.sectionHeader:hover
+	{
+		background-color: var(--side-nav-color) !important;
+	}
+}
+
+.settingsSection
+{
+	background-color: transparent !important;
+	max-width: 600px !important;
+
+	.sectionHeader
+	{
+		border-radius: 5px;
+	}
+
+	.switchColumnGrid, .switchColumn, .switchGrid
+	{
+		display: flex !important;
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	// switches
+	.switchColumnGrid, .switchColumn
+	{
+		gap: 20px;
+	}
+
+	// dropdowns
+	.switchGrid
+	{
+		gap: 10px;
+	}
+
+	.switchColumnGrid, .switchGrid
+	{
+		margin-top: 10px;
+	}
+
+	.groupTitle
+	{
+		text-align: start !important;
+		padding-left: 20px !important;
+		margin-top: 30px !important;
+		margin-bottom: 15px !important;
+	}
+
+	.sectionLine
+	{
+		border-color: transparent !important;
+	}
+
+	.ft-flex-box
+	{
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: stretch !important;
+
+		& > .select, & > .pure-material-slider
+		{
+			inline-size: auto !important;
+		}
+	}
+
+	.settingsFlexStart460px
+	{
+		margin-top: 40px !important;
+	}
+
+	.av1Switch
+	{
+		margin-top: 25px !important;
+		align-self: normal !important;
+		padding-left: 15px;
+	}
+
+	.dataSettingsBox
+	{
+		margin-bottom: 15px;
+	}
+}
+
+.settingsSection[open]
+{
+	margin-bottom: 20px;
+	background-color: var(--side-nav-color) !important;
+	border-radius: 5px;
+}
+
+// --- settings page ---
+
+
+// about page
+.about-chunks
+{
+	& > .chunk
+	{
+		box-shadow: none !important;
+	}
+}
+
+// add to playlist popup
+.promptCard
+{
+	.playlists-container
+	{
+		box-shadow: none !important;
+	}
+
+	// make the save button more visible
+	.playlists-container + .actions-container > div > button:nth-child(2)
+	{
+		--accent-color: var(--restyled-primary-btn-color);
+		--text-with-accent-color: var(--restyled-primary-btn-text-color);
+	}
+}
+
+
+// --- video view ---
+
+.infoArea > .watchVideo
+{
+	padding: 0 !important;
+}
+
+.watchVideo, .watchVideoSideBar
+{
+	background-color: transparent !important;
+	box-shadow: none !important;
+}
+
+.switch-label
+{
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.watchVideoSideBar
+{
+	padding-top: 0 !important;
+
+	& > .VideoRecommendationsTopBar
+	{
+		margin-bottom: 5px;
+	}
+
+	& > .VideoRecommendationsTopBar > h3
+	{
+		margin: 0 !important;
+	}
+
+	.playlistTitle
+	{
+		margin-top: 0 !important;
+	}
+}
+
+.videoDescription
+{
+	& > .description
+	{
+		margin-top: 0 !important;
+	}
+}
+
+.watchVideoInfo
+{
+	margin-bottom: 0 !important;
+
+	// video action buttons
+	& > .videoButtons > .videoOptions > .ftIconButton
+	{
+		--accent-color-active: var(--accent-color);
+
+		.iconDropdown
+		{
+			.switch-ctn
+			{
+				margin-top: 12px;
+			}
+		}
+	}
+}
+
+// show comments button
+.getCommentsTitle
+{
+	text-decoration: none !important;
+}
+
+.comment
+{
+	padding-left: 0 !important;
+}
+
+// video author's comment - username
+.commentOwner
+{
+	background-color: var(--accent-color) !important;
+}
+
+// adjust padding when subscribed icon is shown
+.commentAuthorWrapper:has(.commentSubscribedIcon) .commentOwner
+{
+	padding-inline: 5px !important;
+	padding-block: 2px !important;
+	padding-right: 21px !important;
+
+	& ~ .commentDate
+	{
+		margin-inline-start: -5px !important;
+	}
+}
+
+// subscribed icon - shows that we subscribe to the comment author's channel
+.commentSubscribedIcon
+{
+	content: var(--logo-icon-bar-color) !important;
+	opacity: 0.8 !important;
+	block-size: 12px !important;
+	inline-size: 12px !important;
+}
+
+// change icon position only for video author's comment
+.commentOwner ~ .commentSubscribedIcon
+{
+	margin-inline: 0 !important;
+	position: relative !important;
+	left: -18px !important;
+	top: -1px !important;
+}
+
+// --- video view ---
+
+
+// playlist view
+.playlistInfo
+{
+	background-color: transparent !important;
+}
+
+// make the watched video thumbnail more visible
+.ft-list-item.watched .thumbnailImage
+{
+	opacity: 0.5 !important;
+}
+
+// fix opacity on hover - this is only needed because of the above change
+.ft-list-item.watched:hover .thumbnailImage
+{
+	opacity: 1 !important;
+}
+
+.searchFilters, .filterChanged, .ftSubscribeButton
+{
+	--primary-color: var(--restyled-primary-btn-color);
+}
