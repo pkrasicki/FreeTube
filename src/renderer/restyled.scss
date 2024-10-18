@@ -43,6 +43,7 @@ body
 	--restyled-primary-btn-text-color: #000;
 	--restyled-primary-btn-divider-color: rgba(0, 0, 0, 0.25);
 	--link-color: #7bc6ff;
+	--favorite-icon-color: #ffea00;
 
 	// switch track
 	.switch-label:before
@@ -177,6 +178,20 @@ a:not(.channelName):not(:hover)
 .topNav .logo
 {
 	display: none !important;
+}
+
+.floatingRefreshSection
+{
+	background-color: transparent !important;
+	box-shadow: none !important;
+	border-inline-start: none !important;
+
+	.lastRefreshTimestamp
+	{
+		background-color: var(--bg-color);
+		position: relative;
+		top: -12px;
+	}
 }
 
 #app .routerView
@@ -397,6 +412,23 @@ input[type=range]::-webkit-slider-runnable-track
 
 .routerView:has(.settingsSection)
 {
+	// the row of toggle buttons on top
+	& > .switchRow
+	{
+		flex-wrap: wrap;
+		max-width: 600px !important;
+		margin-bottom: 5px;
+	}
+
+	@media (max-width: 680px)
+	{
+		// by default they are centered but we don't want that on mobile
+		& > .switchRow
+		{
+			margin-inline: initial !important;
+		}
+	}
+
 	.switchColumnGrid, hr
 	{
 		max-width: 600px !important;
