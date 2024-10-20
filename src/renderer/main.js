@@ -94,7 +94,8 @@ import {
   faUsersSlash,
 } from '@fortawesome/free-solid-svg-icons'
 import {
-  faBookmark as farBookmark
+  faBookmark as farBookmark,
+  faStar as farStar
 } from '@fortawesome/free-regular-svg-icons'
 import {
   faBitcoin,
@@ -194,6 +195,7 @@ library.add(
 
   // solid icons
   farBookmark,
+  farStar,
 
   // brand icons
   faGithub,
